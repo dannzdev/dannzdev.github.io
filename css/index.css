@@ -34,5 +34,173 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font: var(--body1-regular);
+}
 
+.header {
+  width: 100%;
+  background-color: var(--black);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 275px;
+  min-width: 275px;
+  width: 27%;
+  height: auto;
+  color: var(--white);
+  text-decoration: none;
+  font: var(--headline3);
+  text-align: center;
+}
+
+nav {
+  min-width: 365px;
+  width: 30%;
+  height: auto;
+  color: var(--white);
+  margin-right: 20px;
+}
+
+.nav-container {
+  width: 100%;
+  height: auto;
+  justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  width: 25%;
+  color: var(--white);
+  text-decoration: none;
+  font: var(--headline5);
+  margin-right: 5px;
+}
+
+.burger-button {
+  display: none;
+  margin: 0 10px;
+}
+
+.burger-button svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+}
+
+
+
+@media (max-width: 700px) {
+ .burger-button {
+   display: block;
+ }
+ nav {
+   display: none;
+ }
+}
+
+main {
+  width: 100%;
+  height: 10vh;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  font: var(--headline5);
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+
+.img-container {
+  width: 35rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+}
+
+.hero-content {
+  width: 50rem;
+  min-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title{
+  width: 90%;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+
+.hero-description {
+  width: 90%;
+  color: var(--paragraph);
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-link {
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  color: var(--button-text);
+  display: inline-block;
+  background-color: var(--button-background);
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-left: 25px;
+}
+
+@media (max-width: 890px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-title{
+    text-align: center;
+
+  }
+
+  .hero-description {
+   text-align: center;
+  }
+  .img-container img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .hero-link {
+    align-self: center;
+  }
+
+  .img-container {
+    margin-bottom: 30px;
+  }
+ }
 
