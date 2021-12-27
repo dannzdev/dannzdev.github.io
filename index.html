@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Lora:wght@400;700&family=Nunito:wght@700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Lora:wght@400;700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ab3efc1485.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/index.css">
   <title>Portfolio</title>
 </head>
@@ -22,9 +23,12 @@
     </div>
     <nav>
       <ul class="nav-container">
+        <div class="nav-close">
+          <i class="far fa-times-circle"></i>
+        </div>
         <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#experience">Experience</a></li>
-        <li><a class="nav-link" href="/">Contact</a></li>
+        <li><a class="nav-link" href="#technologies">Technologies</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -65,8 +69,8 @@
           Tecnologias: Javascript, React.js con Router para el enrutamiento, Hooks para el fetching de APIS, Webpack para armar el bundle, Babel para compilar, Sass para los estilos CSS3 y Netlify para el Deploy..
         </p>
         <div class="buttons-container">
-          <a class="projects-button button-first" href="https://reactxshop.netlify.app/" target="_blank">Ver proyecto</a>
-          <a class="projects-button button-second" href="https://github.com/dannzdev/react-shop" target="_blank">  Ver codigo</a>
+          <a class="projects-button button2" href="https://reactxshop.netlify.app/" target="_blank">Ver proyecto</a>
+          <a class="projects-button button-second buttons2" href="https://github.com/dannzdev/react-shop" target="_blank">  Ver codigo</a>
         </div>
       </div>
     </section>
@@ -95,12 +99,55 @@
           Tecnologias: HTML5, CSS3, Media Querys & Metodologia BEM para las clases. Deploy en Github Pages.
         </p>
         <div class="buttons-container">
-          <a class="projects-button button-first" href="https://dannzdev.github.io/BatataBitcoin/">Ver proyecto</a>
-          <a class="projects-button button-second" href="https://github.com/dannzdev/BatataBitcoin">  Ver codigo</a>
+          <a class="projects-button button4" href="https://dannzdev.github.io/BatataBitcoin/">Ver proyecto</a>
+          <a class="projects-button button-second buttons4" href="https://github.com/dannzdev/BatataBitcoin">  Ver codigo</a>
         </div>
       </div>
     </section>
+    <article id="technologies" class="tech-section">
+      <h2>Tecnologias</h2>
+
+      <div class="skills">
+      <p class="skills-title">Desarrollador Frontend</p>
+      <p>HTML5, CSS3, Javascript, Sass, React.js, Next.js, Node.js, Webpack, Babel, Eslint, Husky, Prettier, Terminal, Github Actions, Heroku, Netlify, BEM Methodologies, UI/UI Interface. </p>
+      </div>
+
+      <div class="skills">
+        <p class="skills-title">Herramientas y Diseno</p>
+        <p>VsCode, Figma, SCRUM, Notion, Slack, Google Calendar.</p>
+      </div>
+
+    </article>
+    <section  id="contact"class="contact">
+      <div class="contact-container">
+        <h2>Quieres trabajar conmigo? 😊</h2>
+      <h2>Hazme ping!👇🏻</h2>
+      <h3>danielsanchez1502<span>@gmail.com</span></h3>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="copyright">©️ Copyright 2021 | Daniel Sanchez</p>
+      <div class="social">
+  
+        <a href="https://twitter.com/dannzdev"><div class="icon">
+          <i class="fab fa-twitter"></i>
+        </div></a>
+  
+        <a href="https://github.com/dannzdev">
+        <div class="icon">
+          <i class="fab fa-github-alt"></i>
+        </div>
+      </a>
+        <a href="https://dev.to/dannzdev">
+        <div class="icon">
+          <i class="fab fa-dev"></i>
+        </div>
+      </a>
+      </div>
+    </footer>
   </main>
+  
+  <script src="./main.js"></script>
 </body>
 </html>
 

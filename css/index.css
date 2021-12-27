@@ -100,6 +100,7 @@ nav {
   padding-top: 10px;
   min-width: 75px;
   display: none;
+  cursor: pointer;
 }
 
 .burger-button svg {
@@ -109,6 +110,9 @@ nav {
   margin-right: 0 50px 0 10px;
 }
 
+.nav-close {
+  display: none;
+}
 
 @media (max-width: 741px) {
   header {
@@ -119,11 +123,47 @@ nav {
   }
  .burger-button {
    display: block;
+
  }
- nav {
-   display: none;
- }
+ .nav-close {
+  display: block;
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
 }
+ nav {
+  width: 100%;
+  max-width: 60vw;
+  min-width: 30vw;
+  position: fixed;
+  background: black;
+  top: 0;
+  right: -120vw;
+  bottom: 0;
+  height: 100%;
+  transition: all .6s ease-in-out;
+  z-index: 100;
+  margin: 0;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 25%;
+  }
+  .nav-open {
+    right: 0;
+
+  }
+  .nav-link {
+    min-width: 75px;
+    padding: 0;
+    margin-left: 10px;
+  }
+  .nav-link:hover {
+    border: none;
+    border-bottom: 2px solid white;
+  }
+ }
 
 
 
@@ -233,7 +273,7 @@ main {
   transition: 1s;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1075px) {
   .img-container {
     width: 25rem;
     height: 100%;
@@ -247,7 +287,7 @@ main {
   }
  }
 
-@media (max-width: 851px) {
+@media (max-width: 940px) {
   .hero {
     justify-content: center;
   }
@@ -350,6 +390,7 @@ main {
 
 .button-second:hover {
   background-color: whitesmoke;
+  border: 1px solid white;
   color: black;
   cursor: pointer;
 }
@@ -377,6 +418,20 @@ main {
   color: var(--button-text);
   margin-left: 10px;
 }
+
+.button2, .button4 {
+  background-color: var(--black);
+  color: var(--white);
+  border: 2px solid black;
+}
+
+.buttons2, .buttons4 { 
+  background-color: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+  margin-left: 10px;
+}
+
 @media (max-width: 857px) {
 
   .projects { 
@@ -386,6 +441,7 @@ main {
   .projects-img {
     width: 65rem;
     height: 45rem;
+    margin-bottom: 30px;
   }
 
   .projects-content {
@@ -425,7 +481,6 @@ main {
   .projects-img {
     width: 45rem;
     height: 25rem;
-    margin-bottom: 30px;
   }
   .projects-content {
     width: 45rem;
@@ -442,7 +497,203 @@ main {
     flex-direction: column;
   }
 
-  .button-second { 
+  .button-second {
     margin: 10px 0 0 0;
   }
  }
+
+ /* Technologies */
+ .tech-section {
+   width: 100%;
+   height: auto;
+   background-color: var(--black);
+   color: var(--white);
+   padding: 25px;
+   font-family: Nunito;
+ }
+
+.tech-section h2 {
+  padding: 10px;
+  font: var(--headline1);
+  text-align: center;
+  margin: 10px 0 0 20px;
+}
+
+.skills {
+  width: 100%;
+  padding: 40px;
+  margin: 0;
+  font: var(--headline3);
+}
+
+
+.skills-title {
+  width: 27%;
+  min-width: 280px;
+  max-width: 300px;
+  border-bottom: 4px solid white;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.skills p:last-child {
+  color:var(--paragraph)
+}
+
+@media (max-width: 800px) {
+  .tech-section h2 {
+    font: var(--headline2);
+    margin-left: -20px;
+    justify-self: center;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skills-title {
+    text-align: center;
+    font-size: 2.2rem;
+    min-width: 250px;
+  }
+  .skills p:last-child {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .skills p:last-child {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Contact */
+
+.contact {
+  width: 100%;
+  height: auto;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: Nunito;
+  padding-bottom: 40px;
+}
+
+.contact-container {
+  width: 80%;
+  height: auto;
+  padding: 40px;
+}
+.contact h2 {
+  font-size: 3rem;
+  line-height: 35px;
+}
+.contact h3 {
+  color: var(--tertiary);
+  margin-top: 30px;
+  font-size: 2.3rem;
+}
+.contact h3 span {
+  text-decoration: underline;
+}
+
+@media (min-width: 650px) {
+  .contact-container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact h2 {
+    font: var(--headline1)
+  }
+  .contact h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact-container {
+    width: 90%;
+  }
+  .contact h2 {
+    font: var(--headline3)
+  }
+  .contact h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Nunito;
+  padding: 20px;
+}
+
+.social {
+  width: 30%;
+  min-width: 210px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon i {
+  font-size: 3rem;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+  .icon i {
+    font-size: 2rem;
+  }
+
+  .copyright { 
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Toggle Button */
+
